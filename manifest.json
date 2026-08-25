@@ -1,0 +1,26 @@
+{
+  "name": "Nexagram",
+  "short_name": "Nexagram",
+  "description": "Мессенджер с звонками, каналами и историями",
+  "start_url": "https://web.nexagram.site/",
+  "scope": "https://web.nexagram.site/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0c0606",
+  "theme_color": "#ff5a2a",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "https://web.nexagram.site/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://web.nexagram.site/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
