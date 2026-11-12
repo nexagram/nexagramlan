@@ -172,6 +172,21 @@
   }
   .btn-ghost svg { width: 18px; height: 18px; }
   .btn-ghost:hover { background: rgba(255,255,255,0.04); border-color: rgba(255,90,42,0.35); }
+  .btn-download {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #1a0f0f;
+    color: #fff;
+    font-weight: 700; font-size: 15px;
+    padding: 14px 24px; border-radius: 999px;
+    border: 1px solid rgba(255,90,42,0.45);
+    transition: transform .15s, box-shadow .15s, background .2s;
+  }
+  .btn-download:hover {
+    transform: translateY(-2px);
+    background: #241212;
+    box-shadow: 0 12px 32px rgba(255,60,40,0.25);
+  }
+  .btn-download svg { width: 18px; height: 18px; }
 
   .phone-wrap {
     display: flex; justify-content: center; align-items: center;
@@ -371,6 +386,7 @@
   <a href="#features" onclick="toggleMenu()" data-i18n="nav_features">Возможности</a>
   <a href="#faq" onclick="toggleMenu()" data-i18n="nav_faq">FAQ</a>
   <a href="#open" onclick="toggleMenu()" data-i18n="nav_open_sec">Открыть</a>
+  <a href="Nexagram.apk" download class="btn-primary" data-i18n="btn_download">Скачать APK</a>
   <a href="https://web.nexagram.site/" class="btn-primary" data-i18n="nav_open">Открыть</a>
 </div>
 
@@ -383,6 +399,10 @@
     <h1 data-i18n-html="hero_title">Мессенджер<br><span>нового уровня</span></h1>
     <p class="lead" data-i18n="hero_lead">Звонки, каналы, истории и группы — всё в одном месте. Быстро, красиво и под твоим контролем.</p>
     <div class="hero-actions">
+      <a href="Nexagram.apk" download class="btn-download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="btn_download">Скачать APK</span>
+      </a>
       <a href="https://web.nexagram.site/" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         <span data-i18n="btn_open">Открыть веб</span>
@@ -482,7 +502,7 @@
         <span data-i18n="q2">Нужно устанавливать приложение?</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <div class="faq-a" data-i18n="a2">Нет. Открой в браузере на телефоне или ПК. Для удобства можно добавить сайт на домашний экран.</div>
+      <div class="faq-a" data-i18n="a2">Можно открыть в браузере или скачать APK для Android. Для удобства добавьте сайт на домашний экран.</div>
     </div>
     <div class="faq-item">
       <button type="button" class="faq-q" onclick="toggleFaq(this)">
@@ -498,14 +518,25 @@
       </button>
       <div class="faq-a" data-i18n="a4">Чаты синхронизируются через Firebase Realtime Database. Медиа загружаются в облачное хранилище.</div>
     </div>
+    <div class="faq-item">
+      <button type="button" class="faq-q" onclick="toggleFaq(this)">
+        <span data-i18n="q5">Как установить APK?</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="faq-a" data-i18n="a5">Скачайте APK, разрешите установку из неизвестных источников в настройках Android и откройте файл.</div>
+    </div>
   </div>
 </section>
 
 <section id="open">
   <div class="cta-box">
     <h2 data-i18n="cta_title">Начни прямо сейчас</h2>
-    <p data-i18n="cta_sub">Открой веб-версию на любом устройстве</p>
+    <p data-i18n="cta_sub">Скачай APK или открой веб-версию на любом устройстве</p>
     <div class="cta-row">
+      <a href="Nexagram.apk" download class="btn-download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span data-i18n="btn_download">Скачать APK</span>
+      </a>
       <a href="https://web.nexagram.site/" class="btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
         <span data-i18n="btn_open">Открыть веб</span>
@@ -523,7 +554,7 @@
 </section>
 
 <footer>
-  <p>© <span id="y"></span> Nexagram · <a href="https://web.nexagram.site/terms">Terms</a> · <a href="https://web.nexagram.site/privacy">Privacy</a></p>
+  <p>© <span id="y"></span> Nexagram · <a href="https://nexagram.site/terms">Terms</a> · <a href="https://nexagram.site/privacy">Privacy</a></p>
 </footer>
 
 <script>
@@ -534,6 +565,7 @@
       hero_title: 'Мессенджер<br><span>нового уровня</span>',
       hero_lead: 'Звонки, каналы, истории и группы — всё в одном месте. Быстро, красиво и под твоим контролем.',
       btn_open: 'Открыть веб', btn_more: 'Подробнее', btn_pc: 'Версия для ПК', btn_app: 'Мобильная',
+      btn_download: 'Скачать APK',
       demo_name: 'Аня', demo_online: 'в сети', demo_placeholder: 'Сообщение...',
       feat_title: 'Всё, что нужно', feat_sub: 'Современный мессенджер без лишнего шума',
       f1_t: 'Чаты и группы', f1_d: 'Личные сообщения, группы и каналы с админами, закрепами и поиском.',
@@ -544,10 +576,11 @@
       f6_t: 'RU / EN', f6_d: 'Полная локализация интерфейса — переключай язык в один тап.',
       faq_title: 'Частые вопросы', faq_sub: 'Коротко о главном',
       q1: 'Это бесплатно?', a1: 'Да. Nexagram можно использовать бесплатно, без скрытых подписок и рекламы в чатах.',
-      q2: 'Нужно устанавливать приложение?', a2: 'Нет. Открой в браузере на телефоне или ПК. Для удобства можно добавить сайт на домашний экран.',
+      q2: 'Нужно устанавливать приложение?', a2: 'Можно открыть в браузере или скачать APK для Android. Для удобства добавьте сайт на домашний экран.',
       q3: 'Как включить уведомления?', a3: 'В настройках нажми «Включить уведомления» и разреши их в браузере. Для пушей при закрытом сайте нужен FCM (Cloud Functions).',
       q4: 'Где хранятся данные?', a4: 'Чаты синхронизируются через Firebase Realtime Database. Медиа загружаются в облачное хранилище.',
-      cta_title: 'Начни прямо сейчас', cta_sub: 'Открой веб-версию на любом устройстве',
+      q5: 'Как установить APK?', a5: 'Скачайте APK, разрешите установку из неизвестных источников в настройках Android и откройте файл.',
+      cta_title: 'Начни прямо сейчас', cta_sub: 'Скачай APK или открой веб-версию на любом устройстве',
       msgs: [
         { t: 'in', text: 'Доброе утро ☀️', time: '9:30' },
         { t: 'in', text: 'Как спалось?', time: '9:30' },
@@ -562,6 +595,7 @@
       hero_title: 'A messenger<br><span>built differently</span>',
       hero_lead: 'Calls, channels, stories and groups — all in one place. Fast, polished, under your control.',
       btn_open: 'Open web', btn_more: 'Learn more', btn_pc: 'Desktop', btn_app: 'Mobile',
+      btn_download: 'Download APK',
       demo_name: 'Anya', demo_online: 'online', demo_placeholder: 'Message...',
       feat_title: 'Everything you need', feat_sub: 'A modern messenger without the noise',
       f1_t: 'Chats & groups', f1_d: 'DMs, groups and channels with admins, pins and search.',
@@ -572,10 +606,11 @@
       f6_t: 'RU / EN', f6_d: 'Full UI localization — switch language in one tap.',
       faq_title: 'FAQ', faq_sub: 'Short answers',
       q1: 'Is it free?', a1: 'Yes. Nexagram is free to use — no hidden subscriptions or ads in chats.',
-      q2: 'Do I need to install an app?', a2: 'No. Open it in the browser on phone or PC. You can add it to your home screen.',
+      q2: 'Do I need to install an app?', a2: 'You can open it in the browser or download the Android APK. You can also add the site to your home screen.',
       q3: 'How do I enable notifications?', a3: 'In Settings tap “Enable notifications” and allow them in the browser. Background push needs FCM Cloud Functions.',
       q4: 'Where is data stored?', a4: 'Chats sync via Firebase Realtime Database. Media is uploaded to cloud storage.',
-      cta_title: 'Start now', cta_sub: 'Open the web app on any device',
+      q5: 'How do I install the APK?', a5: 'Download the APK, allow installs from unknown sources in Android settings, then open the file.',
+      cta_title: 'Start now', cta_sub: 'Download the APK or open the web app on any device',
       msgs: [
         { t: 'in', text: 'Good morning ☀️', time: '9:30' },
         { t: 'in', text: 'How did you sleep?', time: '9:30' },
